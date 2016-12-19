@@ -1,0 +1,22 @@
+<h1>Steal yo Cookies</h1>
+
+<p>I set a cookie in your browser to "Cat=Meow".</p>
+
+<p>Click below if you want me to steal it and save it to the database.</p>
+
+<p><strong>AJAX cookie stealing:</strong></p>
+
+<p><a href class="steal_cookie">Steal It!</a></p>
+
+<p><strong>LINK tag cookie stealing:</strong></p>
+
+<p><%= link_to "Steal It!", cookies_path %></p>
+
+<p><div class="result"></div></p>
+
+<p>
+<h2>Cookies Stolen (<%= @cookies.count %>)</h2>
+	<%- @cookies.each do |cookie| %>
+		<p><%= cookie.content %></p>
+	<% end %>
+</p>
